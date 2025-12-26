@@ -1,11 +1,64 @@
+
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PakePlus</title>
-    </head>
-    <body>
-        PakePlus
-    </body>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>霓虹坦克大作战</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #020617;
+            font-family: 'Inter', "Microsoft YaHei", sans-serif;
+            touch-action: none; /* 禁用缩放和滚动 */
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', "Microsoft YaHei", sans-serif;
+        }
+        
+        /* 竖屏时的提示 */
+        #portrait-notice {
+            display: none;
+        }
+        @media (orientation: portrait) {
+            #portrait-notice {
+                display: flex;
+                position: fixed;
+                inset: 0;
+                background: #020617;
+                color: #22d3ee;
+                z-index: 9999;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 20px;
+            }
+        }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "peerjs": "https://esm.sh/peerjs@^1.5.5"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-CLT4LbCO.js"></script>
+</head>
+<body>
+    <div id="portrait-notice">
+        <div class="text-4xl mb-4">🔄</div>
+        <h2 class="text-xl font-orbitron uppercase">请将设备横屏游玩</h2>
+        <p class="mt-2 text-sm text-slate-500">为了更好的战斗体验，我们需要更大的宽度</p>
+    </div>
+    <div id="root"></div>
+</body>
 </html>
